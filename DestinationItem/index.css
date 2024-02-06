@@ -1,0 +1,11 @@
+/* Write your CSS here */
+.item-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.item-image {
+  height: 150px;
+  width: 220px;
+}
