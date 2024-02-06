@@ -1,0 +1,47 @@
+/* Write your CSS here */
+.bg-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.heading {
+  color: #252627;
+  font-family: 'Roboto';
+  font-size: 35px;
+}
+
+.input-style {
+  background-color: #f1f5f9;
+  border-width: 0px;
+  border-radius: 10px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.image {
+  height: 20px;
+  width: 20px;
+}
+.input-container {
+  background-color: #f1f5f9;
+  border-width: 0px;
+  border-radius: 10px;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.initial-lists {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 40vw;
+}
