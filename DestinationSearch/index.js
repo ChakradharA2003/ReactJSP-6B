@@ -12,24 +12,21 @@ class DestinationSearch extends Component {
     this.setState({
       searchInput: event.target.value,
     })
-    const {destinationsList} = this.props
-    const {searchInput} = this.state
-    const filteredDestinations = destinationsList.filter(eachItem =>
-      eachItem.name.includes(searchInput),
-    )
   }
 
   render() {
     const {destinationsList} = this.props
-    const initialList = destinationsList
     const {searchInput} = this.state
+    const searchedDestinations = destinationsList.filter(eachItem =>
+      eachItem.name.includes(searchInput),
+    )
     return (
       <div className="bg-container">
         <h1 className="heading">Destination Search</h1>
         <div className="input-container">
           <input
             value={searchInput}
-            type="text"
+            type="search"
             className="input-style"
             placeholder="Search"
             onChange={this.onFilterDestinations}
@@ -40,11 +37,15 @@ class DestinationSearch extends Component {
             className="image"
           />
         </div>
-        <div className="initial-lists">
-          {initialList.map(eachItem => (
-            <DestinationItem imgUrl={eachItem.imgUrl} name={eachItem.name} />
+        <ul className="initial-lists">
+          {searchedDestinations.map(eachItem => (
+            <DestinationItem
+              imgUrl={eachItem.imgUrl}
+              name={eachItem.name}
+              id={eachItem.id}
+            />
           ))}
-        </div>
+        </ul>
       </div>
     )
   }
